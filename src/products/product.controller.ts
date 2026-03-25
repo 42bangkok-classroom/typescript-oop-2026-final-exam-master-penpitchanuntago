@@ -1,12 +1,20 @@
-import { Controller, Get } from '@nestjs/common';
+import { Controller, Get, Post } from '@nestjs/common';
 import { ProductService }  from './product.service';
-
+import { createProductDto } from '';
 @Controller() 
 export class ProductController {
     constructor (private readonly productsService : ProductService ){}
        @Get()
-        getProduct(){
-                return this.productsService.getallProduct();
+        findAll(){
+            return this.productsService.getallProduct();
         }
     
+        @Get()
+        findOne(){
+            return this.productsService
+        }
+        @Post()
+        create(createProductDto: CreateProductDto){
+
+        }
 }
