@@ -1,7 +1,7 @@
-interface Product {
-    id : string ;
+export interface Product {
+    id : number ;
     name : string ;
-    price : string;
-    stock : string;
+    price : number;
+    stock : number;
     description: string;
 }
